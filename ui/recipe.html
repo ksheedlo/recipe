@@ -6,27 +6,29 @@
 </head>
 <body>
     <div id="skillitHeader">
-        <div id="headerTitle">
-            <div id="titleText">Skillit</div>
-            <div id="titleTagline">Social Cooking</div>
-        </div>
+        <a href="/recipe">
+            <div id="headerTitle">
+                <div id="titleText">Skillit</div>
+                <div id="titleTagline">Social Cooking</div>
+            </div>
+        </a>
     </div>
     <div id="skillitBody">
         <div class="recipeName">{{ recipe.name }}</div>
         <div class="recipeDescription">{{ recipe.description }}</div>
-        <div class="recipePixWrapper">
-            <img src="/static/photos/{{ recipe.get_photo_or_default }}" />
-        </div>
-        <div class="ingredientsWrapper">
-            <ul>
-                {% for ingredient in recipe.ingredients %}
-                <li>
-                    <div class="ingredient">
-                        {{ ingredient.quantity }} {{ ingredient.unit }} {{ ingredient.item }}
-                    </div>
-                </li>
-                {% endfor %}
-            </ul>
+        <div class="photoIngredientsWrapper">
+            <div class="recipePixWrapper">
+                <img src="/static/photos/{{ recipe.photo|default:'skillit_default.png' }}" />
+            </div>
+            <div class="ingredientsWrapper">
+                <ul>
+                    {% for ingredient in recipe.ingredients.all %}
+                    <li>
+                        <div class="ingredient">{{ ingredient }}</div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
         <p class="procedure">{{ recipe.procedure }}</p>
         <div class="servings">Serves {{ recipe.servings }}</div>

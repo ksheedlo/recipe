@@ -9,5 +9,8 @@ def index(request):
                                                 'recipes': recipes_results
                                                 })
 
-def recipe(request, recipe_id):
-    pass
+def detail(request, recipe_id):
+    recipe = recipes.models.Recipe.objects.get(id=recipe_id)
+    return django.shortcuts.render_to_response('recipes/recipe.html', {
+                                                'recipe': recipe
+                                                })

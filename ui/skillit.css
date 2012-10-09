@@ -40,6 +40,8 @@ ul {
 
 #skillitBody {
     font-family: 'Open Sans Condensed';
+    width: 100%;
+    min-width: 794px;
 }
 
 #recentHeader {
@@ -49,8 +51,24 @@ ul {
     margin: 5px 20px 0 30px;
 }
 
+.recipe {
+    background: #D9DADB;
+    padding: 5px 10px;
+    width: 600px;
+    margin-top: 10px;
+}
+
 .recipe .recipeName {
     font-size: 32px;
+}
+
+.recipe .recipeName a {
+    color: #212223;
+    text-decoration: none;
+}
+
+.recipe .recipeName a:hover {
+    color: #FC5C2A;
 }
 
 .recipe .recipeInfo {
@@ -64,14 +82,22 @@ ul {
     float: left;
 }
 
+.recipeInfo .recipeThumbWrapper img {
+    width: 120px;
+    height: 120px;
+}
+
 .recipeInfo .recipeDescription {
     margin-left: 140px;
+    font-size: 18px;
 }
 
 .categories {
-    position: absolute;
-    top: 110px;
-    left: 680px;
+    float: right;
+    position: relative;
+    bottom: 452px;
+    padding-right: 20px;
+    background: #76AED0;
 }
 
 .categories ul {
@@ -79,4 +105,7 @@ ul {
     margin: 0;
     font-size: 22px;
 }
+
+a {
+    text-decoration: none;
 }

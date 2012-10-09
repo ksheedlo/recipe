@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'League Gothic';
+    src: url("/static/type/leaguegothic-regular-webfont.ttf");
+}
+
+#skillitHeader {
+    margin: 0;
+    background: #212223;
+    width: 100%;
+    position: relative;
+    right: 8px;
+    bottom: 10px;
+    padding: 30px;
+}
+
+#headerTitle {
+    color: white;
+}
+
+#titleText {
+    font-family: 'League Gothic';
+    font-size: 60px;
+    text-transform: uppercase;
+    float: left;
+}
+
+#titleTagline {
+    font-family: 'Open Sans Condensed';
+    font-size: 32px;
+    font-style: italic;
+    text-transform: lowercase;
+    position: relative;
+    top: 22px;
+    left: 12px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#skillitBody {
+    font-family: 'Open Sans Condensed';
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+.recipeName {
+    font-size: 48px;
+}
+
+.photoIngredientsWrapper {
+    min-height: 240px;
+    margin-top: 10px;
+}
+
+.recipePixWrapper {
+    float: left;
+}
+
+.recipePixWrapper img {
+    height: 240px;
+    width: 240px;
+}
+
+.ingredientsWrapper {
+    position: relative;
+    left: 20px;
+}
+
+a {
+    text-decoration: none;
+}

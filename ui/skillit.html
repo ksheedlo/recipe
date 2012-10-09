@@ -6,10 +6,12 @@
 </head>
 <body>
     <div id="skillitHeader">
-        <div id="headerTitle" class="clearfix">
-            <div id="titleText">Skillit</div>
-            <div id="titleTagline">Social Cooking</div>
-        </div>
+        <a href="/recipe">
+            <div id="headerTitle" class="clearfix">
+                <div id="titleText">Skillit</div>
+                <div id="titleTagline">Social Cooking</div>
+            </div>
+        </a>
     </div>
     <div id="skillitBody">
         <div id="recentHeader">Recent Recipes</div>
@@ -17,10 +19,14 @@
             {% for recipe in recipes %}
             <li>
                 <div class="recipe">
-                    <div class="recipeName">{{ recipe.name }}</div>
+                    <div class="recipeName">
+                        <a href="/recipe/{{ recipe.id }}">
+                            {{ recipe.name }}
+                        </a>
+                    </div>
                     <div class="recipeInfo">
                         <div class="recipeThumbWrapper">
-                            <img src="{{ recipe.get_photo_or_default }}" />
+                            <img src="/static/photos/{{ recipe.photo|default:'skillit_default.png' }}" />
                         </div>
                         <div class="recipeDescription">
                             {{ recipe.description }}
