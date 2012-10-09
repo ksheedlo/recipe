@@ -2,3 +2,10 @@
 *.pot
 *.pyc
 local_settings.py
+
+# Database files
+database/sqlite3.db
+
+# Python environment
+python_env/
+

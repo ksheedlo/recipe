@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# TODO: This script should have richer functionality, such as supporting JS and
+# determining when included files need to be inlined for template processing.
+# Consider using Python. For now, we'll just copy our ui files into the correct
+# location.
+cp ui/*.html templates/recipes
+cp ui/*.css static
+

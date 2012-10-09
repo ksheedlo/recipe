@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'League Gothic';
+    src: url("/static/type/leaguegothic-regular-webfont.ttf");
+}
+
+#skillitHeader {
+    margin: 0;
+    background: #212223;
+    width: 100%;
+    position: relative;
+    right: 8px;
+    bottom: 10px;
+    padding: 30px;
+}
+
+#headerTitle {
+    color: white;
+}
+
+#titleText {
+    font-family: 'League Gothic';
+    font-size: 60px;
+    text-transform: uppercase;
+    float: left;
+}
+
+#titleTagline {
+    font-family: 'Open Sans Condensed';
+    font-size: 32px;
+    font-style: italic;
+    text-transform: lowercase;
+    position: relative;
+    top: 22px;
+    left: 12px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#skillitBody {
+    font-family: 'Open Sans Condensed';
+}
+
+#recentHeader {
+    font-family: 'League Gothic';
+    text-transform: uppercase;
+    font-size: 44px;
+    margin: 5px 20px 0 30px;
+}
+
+.recipe .recipeName {
+    font-size: 32px;
+}
+
+.recipe .recipeInfo {
+    height: 135px;
+    width: 600px;
+}
+
+.recipeInfo .recipeThumbWrapper {
+    width: 120px;
+    height: 120px;
+    float: left;
+}
+
+.recipeInfo .recipeDescription {
+    margin-left: 140px;
+}
+
+.categories {
+    position: absolute;
+    top: 110px;
+    left: 680px;
+}
+
+.categories ul {
+    padding: 10px;
+    margin: 0;
+    font-size: 22px;
+}
+}
