@@ -9,8 +9,8 @@ database/sqlite3.db
 # Python environment
 python_env/
 
-# Static and template files
-static/
+# template files
+static/*.css
 templates/
 
 

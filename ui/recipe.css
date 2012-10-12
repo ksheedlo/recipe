@@ -32,6 +32,7 @@
     position: relative;
     top: 22px;
     left: 12px;
+    color: #FC5C2A;
 }
 
 ul {
@@ -42,6 +43,7 @@ ul {
     font-family: 'Open Sans Condensed';
     padding-left: 20px;
     font-size: 18px;
+    color: #212223;
 }
 
 .recipeName {

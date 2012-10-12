@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <title>Skillit | {{ category_name|title }}s</title>
+    <link rel="stylesheet" type="text/css" href="/static/category.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div id="skillitHeader">
+        <a href="/recipe">
+            <div id="headerTitle" class="clearfix">
+                <div id="titleText">Skillit</div>
+                <div id="titleTagline">Social Cooking</div>
+            </div>
+        </a>
+    </div>
+    <div id="skillitBody">
+        <h2 class="categoryTitle">{{ category_name }}s</h2>
+        {% for recipe in recipes %}
+            <div class="recipe">
+                <div class="recipeBlockHeader">
+                    <a href="/recipe/{{ recipe.id }}">{{ recipe.name }}</a>
+                </div>
+                <div class="recipeInfo">
+                    <div class="recipeThumbWrapper">
+                        <img src="/static/photos/{{ recipe.photo|default:'skillit_default.png' }}" />
+                    </div>
+                    <div class="recipeDescription">
+                        {{ recipe.description }}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>

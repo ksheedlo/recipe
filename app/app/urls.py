@@ -6,7 +6,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r"^recipe/$", 'recipes.views.index'),
-    url(r"recipe/(?P<recipe_id>\d+)/$", 'recipes.views.detail'),
+    url(r"^recipe/(?P<recipe_id>\d+)/$", 'recipes.views.detail'),
+    url(r"^recipe/category/(?P<category_name>\w+)/$", 'recipes.views.category'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

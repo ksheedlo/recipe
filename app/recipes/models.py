@@ -10,18 +10,24 @@ RECIPE_CATEGORY_CHOICES = (
     ('S', 'side'),
 )
 
+def recipe_category_shortname(long_name):
+    for (sn, ln) in RECIPE_CATEGORY_CHOICES:
+        if ln == long_name:
+            return sn
+    return ''
+
 RECIPE_DEFAULT_PHOTO = '/static/photos/skillit_default.png'
 
 class Ingredient(models.Model):
     quantity = models.CharField(max_length=32)
     item = models.CharField(max_length=64)
-    unit = models.CharField(max_length=64)
+    unit = models.CharField(max_length=64, blank=True, null=True)
 
     def __unicode__(self):
         return '{0} {1}{2} {3}'.format(
             self.quantity,
             self.unit,
-            's' if self.parse_quantity() > 1 else '',
+            's' if self.unit != '' and self.parse_quantity() > 1 else '',
             self.item
             )
 
@@ -32,7 +38,11 @@ class Ingredient(models.Model):
             pass
 
         split_str = self.quantity.replace('/', ' ')
-        split = [float(num) for num in split_str.split(' ')]
+        chars = split_str.split(' ')
+        while '' in chars:
+            chars.remove('')
+
+        split = [float(num) for num in chars]
         if len(split) == 1:
             return split[0]
         elif len(split) == 2:

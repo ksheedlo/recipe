@@ -13,7 +13,7 @@
             </div>
         </a>
     </div>
-    <div id="skillitBody">
+    <div id="skillitBody" class="leftMainColumn">
         <div id="recentHeader">Recent Recipes</div>
         <ul>
             {% for recipe in recipes %}
@@ -36,14 +36,25 @@
             </li>
             {% endfor %}
         </ul>
-        <div class="categories">
-            <ul>
-                <li>Appetizers</li>
-                <li>Cocktails</li>
-                <li>Desserts</li>
-                <li>Main Meals</li>
-                <li>Side Dishes</li>
-            </ul>
-        </div>
+    </div>
+    <div class="categories">
+        <h2>Browse by category</h2>
+        <ul>
+            <li>
+                <a href="/recipe/category/appetizer">Appetizers</a>
+            </li>
+            <li>
+                <a href="/recipe/category/cocktail">Cocktails</a>
+            </li>
+            <li>
+                <a href="/recipe/category/dessert">Desserts</a>
+            </li>
+            <li>
+                <a href="/recipe/category/main">Main Meals</a>
+            </li>
+            <li>
+                <a href="/recipe/category/side">Side Dishes</a>
+            </li>
+        </ul>
     </div>
 </body>
