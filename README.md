@@ -36,6 +36,18 @@ an account when you ran syncdb. As you add things to the admin site, they should
 begin to show up on the home page and also generate their own detail pages.
 Appetizers, cocktails, etc. will all show up on the appropriate category page.
 
+## Quirks and Useful Details
+
+You might have to run the ./build\_ui script to setup the initial HTML/CSS
+template files. This is an artifact from a time when I thought the ui code was
+going to be somewhat more complicated and have templating going on possibly in
+CSS and Javascript files as well as the HTML, which turned out not to happen.
+
+If everything blows up and you don't know what's going on, you might try setting
+app.settings.RECIPE\_ROOT to this project's root directory. I've attempted to
+detect it when settings load, and I've successfully used the same code snippet
+in other projects, but it's untested for this project.
+
 ## Github
 
 You can find the most up-to-date code on my github at
