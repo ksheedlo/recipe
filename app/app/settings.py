@@ -1,15 +1,22 @@
 # Django settings for app project.
 
+import os
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
+    ('Ken Sheedlo', 'ovrkenthousand@gmail.com'),
 )
 
 MANAGERS = ADMINS
 
-RECIPE_ROOT = '/home/ken/recipe'
+# XXX This is a hack that should evaluate to the root project directory
+RECIPE_ROOT = os.path.abspath(os.path.join(
+                os.path.dirname(os.path.abspath(__file__)),
+                '../..'
+                ))
 
 DATABASES = {
     'default': {
